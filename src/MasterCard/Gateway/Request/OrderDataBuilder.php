@@ -48,7 +48,7 @@ class OrderDataBuilder implements BuilderInterface
 
         /** @var \Magento\Sales\Model\Order\Item $item */
         foreach ($items as $item) {
-            if ($item->isDummy(true)) {
+            if ($item->isDummy(true)) { // wokeignore:rule=dummy - 3rd party library
                 continue;
             }
             $result[] = [
